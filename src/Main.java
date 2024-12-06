@@ -5,8 +5,8 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        String word1 = "word";
-        String[] word1Array = {"w", "o", "r", "d"};
+        String word1 = "basketball";
+        String[] word1Array = {"b", "a", "s", "k", "e", "t", "b", "a", "l", "l"};
         String[] visibleWord = new String[word1Array.length];
 
         for (int i = 0; i < word1Array.length; i++) {
@@ -21,13 +21,13 @@ public class Main {
             String usersGuess = sc.nextLine();
 
             for (int i = 0; i < word1Array.length; i++) {
-                if (Objects.equals(word1Array[i], usersGuess)) {
+                if (Objects.equals(word1Array[i], usersGuess) && !Objects.equals(usersGuess, "guessed")) {
                     visibleWord[i] = usersGuess + " ";
                     rightGuessCount++;
                     word1Array[i] = "guessed";
                 }
                 else if (Objects.equals(word1, usersGuess)) {
-                    System.out.println("w o r d");
+                    System.out.println("b a s k e t b a l l");
                     break outerLoop;
                 }
                 System.out.print(visibleWord[i]);
