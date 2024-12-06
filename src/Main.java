@@ -9,6 +9,8 @@ public class Main {
         String[] word1Array = {"b", "a", "s", "k", "e", "t", "b", "a", "l", "l"};
         String[] visibleWord = new String[word1Array.length];
 
+        System.out.println("A dynamic game played on a hardwood surface,\nwhere two teams aim to accumulate points\nby propelling a spherical object through a suspended circular goal.");
+
         for (int i = 0; i < word1Array.length; i++) {
             visibleWord[i] = "_ ";
             System.out.print(visibleWord[i]);
@@ -19,6 +21,8 @@ public class Main {
         outerLoop:
         while (rightGuessCount < visibleWord.length) {
             String usersGuess = sc.nextLine();
+
+            System.out.println("A dynamic game played on a hardwood surface,\nwhere two teams aim to accumulate points\nby propelling a spherical object through a suspended circular goal.");
 
             for (int i = 0; i < word1Array.length; i++) {
                 if (Objects.equals(word1Array[i], usersGuess) && !Objects.equals(usersGuess, "guessed")) {
